@@ -1,0 +1,18 @@
+
+server:
+  port: 8088
+# actuator是否需要安全保证配置
+management:
+  security:
+    enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# actuator登录认证配置
+spring:
+  security:
+    user:
+      name: admin${random.int}
+      password: ${random.value}
+
